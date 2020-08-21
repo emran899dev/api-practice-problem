@@ -16,11 +16,12 @@
                 showUserNames(data)
             })
         function showUserNames(data) {
-            let list = " "
+            let lists = " "
             data.forEach(user => {
-                list = list + `<li>${user.name}</li>`
+                lists = lists + `<li>${user.name} : ${user.email}</li>`
             });
-            console.log(list);
+            const ul = document.getElementById('user-list')
+            ul.innerHTML = lists
         }
     </script>
 </body>
